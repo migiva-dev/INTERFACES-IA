@@ -299,6 +299,7 @@ button {
     padding: 13px 18px;
     border-radius: 14px;
     font-weight: bold;
+    
 }
 
 @media (max-width: 1000px) {
