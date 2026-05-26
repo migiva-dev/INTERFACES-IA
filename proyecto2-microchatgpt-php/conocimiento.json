@@ -1,0 +1,434 @@
+[
+    {
+        "pregunta": "¿Qué es MicroChatGPT?",
+        "respuesta": "MicroChatGPT es una aplicación web sencilla que permite conversar con una inteligencia artificial local. Está desarrollada con PHP y se conecta a Ollama para generar respuestas desde el propio equipo."
+    },
+    {
+        "pregunta": "¿Cuál es el objetivo de MicroChatGPT?",
+        "respuesta": "El objetivo de MicroChatGPT es crear un chat básico conectado a una IA local, usando PHP como intermediario entre el navegador y Ollama."
+    },
+    {
+        "pregunta": "¿Qué problema resuelve este proyecto?",
+        "respuesta": "Este proyecto permite crear una interfaz web para interactuar con un modelo de inteligencia artificial local sin tener que escribir los comandos directamente en la terminal."
+    },
+    {
+        "pregunta": "¿Qué es Ollama?",
+        "respuesta": "Ollama es una herramienta que permite descargar, ejecutar y gestionar modelos de inteligencia artificial de forma local en el ordenador."
+    },
+    {
+        "pregunta": "¿Por qué se utiliza Ollama en este proyecto?",
+        "respuesta": "Se utiliza Ollama porque permite ejecutar modelos de inteligencia artificial en local, evitando depender de servicios externos o APIs de pago."
+    },
+    {
+        "pregunta": "¿Qué ventaja tiene usar una IA local?",
+        "respuesta": "La principal ventaja es que la IA se ejecuta en el propio equipo, lo que mejora la privacidad, reduce la dependencia de internet y permite mayor control sobre el modelo utilizado."
+    },
+    {
+        "pregunta": "¿Qué desventaja tiene usar una IA local?",
+        "respuesta": "La principal desventaja es que el rendimiento depende del hardware del ordenador. Si el equipo tiene poca memoria o un procesador limitado, las respuestas pueden tardar más."
+    },
+    {
+        "pregunta": "¿Qué papel tiene PHP en MicroChatGPT?",
+        "respuesta": "PHP actúa como intermediario entre la página web y Ollama. Recibe el mensaje del usuario, lo envía a la API local de Ollama y devuelve la respuesta al navegador."
+    },
+    {
+        "pregunta": "¿Por qué no se llama directamente a Ollama desde JavaScript?",
+        "respuesta": "Se usa PHP como intermediario para controlar mejor la petición, evitar problemas de CORS y mantener la lógica de conexión con Ollama en el backend."
+    },
+    {
+        "pregunta": "¿Qué hace el archivo chat.php?",
+        "respuesta": "El archivo chat.php recibe el mensaje enviado desde JavaScript, prepara la petición para Ollama, obtiene la respuesta del modelo y la devuelve al frontend en formato JSON."
+    },
+    {
+        "pregunta": "¿Qué hace el archivo script.js?",
+        "respuesta": "El archivo script.js captura el mensaje escrito por el usuario, lo envía a chat.php mediante fetch y muestra la respuesta de la IA dentro del chat."
+    },
+    {
+        "pregunta": "¿Qué hace el archivo index.php?",
+        "respuesta": "El archivo index.php contiene la estructura principal de la aplicación web, incluyendo la cabecera, el contenedor del chat, el formulario de entrada y el panel informativo."
+    },
+    {
+        "pregunta": "¿Qué hace el archivo style.css?",
+        "respuesta": "El archivo style.css define el diseño visual del proyecto, como los colores, el tamaño del chat, los mensajes, los botones y la distribución de la interfaz."
+    },
+    {
+        "pregunta": "¿Qué es una API?",
+        "respuesta": "Una API es un conjunto de reglas que permite que dos aplicaciones se comuniquen entre sí. En este proyecto, PHP se comunica con la API local de Ollama."
+    },
+    {
+        "pregunta": "¿Qué API utiliza Ollama?",
+        "respuesta": "Ollama utiliza una API local accesible normalmente desde http://localhost:11434. Esta API permite enviar preguntas a los modelos instalados y recibir respuestas."
+    },
+    {
+        "pregunta": "¿Qué es el endpoint /api/chat?",
+        "respuesta": "El endpoint /api/chat es una ruta de la API de Ollama que permite enviar una conversación a un modelo de IA y recibir una respuesta en formato de chat."
+    },
+    {
+        "pregunta": "¿Qué significa localhost:11434?",
+        "respuesta": "localhost:11434 es la dirección local donde Ollama escucha peticiones. localhost indica el propio equipo y 11434 es el puerto usado por Ollama."
+    },
+    {
+        "pregunta": "¿Qué significa stream false?",
+        "respuesta": "stream false indica que Ollama debe devolver la respuesta completa de una sola vez, en lugar de enviarla poco a poco mientras se va generando."
+    },
+    {
+        "pregunta": "¿Qué significa stream true?",
+        "respuesta": "stream true significa que Ollama puede enviar la respuesta por partes mientras la va generando. Es útil para chats más avanzados, pero más complejo de procesar."
+    },
+    {
+        "pregunta": "¿Qué modelo utiliza este proyecto?",
+        "respuesta": "Este proyecto puede utilizar modelos instalados en Ollama, como llama3.2:1b o ministral-3:3b. El modelo concreto se configura dentro del archivo chat.php."
+    },
+    {
+        "pregunta": "¿Por qué se usa llama3.2:1b?",
+        "respuesta": "Se usa llama3.2:1b porque es un modelo ligero, rápido y adecuado para pruebas locales en equipos con recursos limitados."
+    },
+    {
+        "pregunta": "¿Por qué se usa ministral-3:3b?",
+        "respuesta": "Se puede usar ministral-3:3b porque es el modelo indicado en la práctica y permite demostrar que se ha descargado y ejecutado un modelo concreto en Ollama."
+    },
+    {
+        "pregunta": "¿Qué significa que el modelo sea ligero?",
+        "respuesta": "Un modelo ligero ocupa menos espacio, consume menos recursos y suele responder más rápido, aunque puede tener menos capacidad que modelos más grandes."
+    },
+    {
+        "pregunta": "¿Qué diferencia hay entre llama3.2:1b y ministral-3:3b?",
+        "respuesta": "llama3.2:1b es más pequeño y rápido, mientras que ministral-3:3b es más grande y puede ofrecer respuestas más completas, aunque normalmente tarda más."
+    },
+    {
+        "pregunta": "¿Se ha entrenado realmente esta IA?",
+        "respuesta": "No se ha entrenado el modelo desde cero. En este proyecto se personaliza su comportamiento mediante instrucciones y se complementa con una base de conocimiento en JSON."
+    },
+    {
+        "pregunta": "¿Qué diferencia hay entre entrenar y personalizar una IA?",
+        "respuesta": "Entrenar una IA implica modificar el modelo con nuevos datos y requiere muchos recursos. Personalizarla consiste en darle instrucciones o información adicional para orientar sus respuestas."
+    },
+    {
+        "pregunta": "¿Qué es una base de conocimiento?",
+        "respuesta": "Una base de conocimiento es un conjunto de información organizada que la aplicación puede consultar para responder mejor a determinadas preguntas."
+    },
+    {
+        "pregunta": "¿Qué es conocimiento.json?",
+        "respuesta": "conocimiento.json es un archivo que contiene preguntas y respuestas relacionadas con el proyecto. Sirve como base de conocimiento local para complementar las respuestas de la IA."
+    },
+    {
+        "pregunta": "¿Para qué sirve el archivo conocimiento.json?",
+        "respuesta": "Sirve para guardar información importante del proyecto en formato JSON. La aplicación puede usarlo para responder preguntas frecuentes antes de consultar a Ollama."
+    },
+    {
+        "pregunta": "¿Qué formato tiene conocimiento.json?",
+        "respuesta": "El archivo conocimiento.json tiene formato JSON y contiene una lista de objetos. Cada objeto incluye una pregunta y una respuesta."
+    },
+    {
+        "pregunta": "¿Qué es JSON?",
+        "respuesta": "JSON es un formato de texto ligero que se utiliza para almacenar e intercambiar datos de forma estructurada. Es fácil de leer para personas y fácil de procesar para programas."
+    },
+    {
+        "pregunta": "¿Por qué se usa JSON en este proyecto?",
+        "respuesta": "Se usa JSON porque permite guardar preguntas y respuestas de forma clara, ordenada y fácil de leer desde PHP o JavaScript."
+    },
+    {
+        "pregunta": "¿Cómo puede usar PHP el archivo conocimiento.json?",
+        "respuesta": "PHP puede leer el archivo conocimiento.json, convertirlo en un array y buscar si la pregunta del usuario coincide con alguna pregunta guardada."
+    },
+    {
+        "pregunta": "¿Qué pasa si la pregunta está en conocimiento.json?",
+        "respuesta": "Si la pregunta está en conocimiento.json, la aplicación puede devolver directamente la respuesta guardada sin consultar a Ollama."
+    },
+    {
+        "pregunta": "¿Qué pasa si la pregunta no está en conocimiento.json?",
+        "respuesta": "Si la pregunta no está en conocimiento.json, la aplicación puede enviar la consulta a Ollama para que el modelo genere una respuesta."
+    },
+    {
+        "pregunta": "¿Qué ventaja tiene responder desde conocimiento.json?",
+        "respuesta": "Responder desde conocimiento.json es más rápido, más controlado y permite asegurar que ciertas respuestas importantes sean correctas."
+    },
+    {
+        "pregunta": "¿Qué ventaja tiene responder con Ollama?",
+        "respuesta": "Responder con Ollama permite generar respuestas dinámicas a preguntas que no están guardadas previamente en la base de conocimiento."
+    },
+    {
+        "pregunta": "¿Qué significa IA generativa?",
+        "respuesta": "La IA generativa es un tipo de inteligencia artificial capaz de crear contenido nuevo, como texto, respuestas, explicaciones o resúmenes, a partir de una entrada del usuario."
+    },
+    {
+        "pregunta": "¿Qué significa modelo de lenguaje?",
+        "respuesta": "Un modelo de lenguaje es un sistema de inteligencia artificial entrenado para comprender y generar texto en lenguaje natural."
+    },
+    {
+        "pregunta": "¿Qué significa prompt?",
+        "respuesta": "Un prompt es la instrucción o pregunta que se le envía a la IA para que genere una respuesta."
+    },
+    {
+        "pregunta": "¿Qué es el mensaje system?",
+        "respuesta": "El mensaje system es una instrucción inicial que se envía al modelo para definir su comportamiento, por ejemplo responder en español, ser breve o actuar como profesor."
+    },
+    {
+        "pregunta": "¿Qué es el mensaje user?",
+        "respuesta": "El mensaje user es el contenido escrito por el usuario, es decir, la pregunta o instrucción que se envía al modelo."
+    },
+    {
+        "pregunta": "¿Qué es el mensaje assistant?",
+        "respuesta": "El mensaje assistant representa las respuestas anteriores generadas por la IA dentro de una conversación."
+    },
+    {
+        "pregunta": "¿Por qué se limita num_predict?",
+        "respuesta": "num_predict limita la cantidad máxima de texto que puede generar el modelo. Esto ayuda a que las respuestas sean más cortas y rápidas."
+    },
+    {
+        "pregunta": "¿Qué significa temperature?",
+        "respuesta": "temperature controla la creatividad del modelo. Un valor bajo genera respuestas más precisas y directas, mientras que un valor alto genera respuestas más creativas."
+    },
+    {
+        "pregunta": "¿Por qué se usa temperature 0.4?",
+        "respuesta": "Se usa temperature 0.4 para obtener respuestas claras, bastante estables y no demasiado aleatorias."
+    },
+    {
+        "pregunta": "¿Qué ocurre cuando el usuario envía un mensaje?",
+        "respuesta": "Cuando el usuario envía un mensaje, JavaScript lo captura, lo manda a chat.php, PHP consulta a Ollama y la respuesta se muestra en el chat."
+    },
+    {
+        "pregunta": "¿Cómo funciona el flujo completo del proyecto?",
+        "respuesta": "El usuario escribe un mensaje en la web. JavaScript lo envía al backend PHP. PHP consulta a Ollama usando su API local. Ollama genera una respuesta y PHP la devuelve al navegador."
+    },
+    {
+        "pregunta": "¿Qué es fetch?",
+        "respuesta": "fetch es una función de JavaScript que permite enviar y recibir datos mediante peticiones HTTP. En este proyecto se usa para enviar el mensaje del usuario a chat.php."
+    },
+    {
+        "pregunta": "¿Qué método HTTP se usa en el proyecto?",
+        "respuesta": "El proyecto utiliza el método POST, porque se envía información desde el navegador al servidor PHP."
+    },
+    {
+        "pregunta": "¿Por qué se usa POST?",
+        "respuesta": "Se usa POST porque permite enviar datos en el cuerpo de la petición, como el mensaje escrito por el usuario."
+    },
+    {
+        "pregunta": "¿Qué devuelve chat.php al navegador?",
+        "respuesta": "chat.php devuelve un JSON con la respuesta generada por la IA o con un mensaje de error si algo falla."
+    },
+    {
+        "pregunta": "¿Qué pasa si Ollama no está iniciado?",
+        "respuesta": "Si Ollama no está iniciado, PHP no podrá conectarse a la API local y el chat mostrará un mensaje de error."
+    },
+    {
+        "pregunta": "¿Cómo se comprueba si Ollama está activo?",
+        "respuesta": "Se puede comprobar con el comando systemctl status ollama o haciendo una petición a http://localhost:11434/api/tags."
+    },
+    {
+        "pregunta": "¿Cómo se inicia Ollama?",
+        "respuesta": "Ollama puede iniciarse con sudo systemctl start ollama si está instalado como servicio. También puede ejecutarse con ollama serve en algunos casos."
+    },
+    {
+        "pregunta": "¿Cómo se ven los modelos instalados?",
+        "respuesta": "Los modelos instalados se pueden ver con el comando ollama list."
+    },
+    {
+        "pregunta": "¿Cómo se descarga un modelo en Ollama?",
+        "respuesta": "Un modelo se descarga con el comando ollama pull seguido del nombre del modelo, por ejemplo ollama pull llama3.2:1b."
+    },
+    {
+        "pregunta": "¿Cómo se prueba un modelo desde la terminal?",
+        "respuesta": "Se puede probar con ollama run seguido del nombre del modelo y una pregunta, por ejemplo ollama run llama3.2:1b \"Hola\"."
+    },
+    {
+        "pregunta": "¿Por qué puede tardar la IA en responder?",
+        "respuesta": "La IA puede tardar por el tamaño del modelo, la potencia del equipo, la longitud de la pregunta o la cantidad de texto que se le pide generar."
+    },
+    {
+        "pregunta": "¿Cómo se puede hacer que responda más rápido?",
+        "respuesta": "Se puede usar un modelo más ligero, limitar num_predict, pedir respuestas más cortas y evitar enviar conversaciones demasiado largas."
+    },
+    {
+        "pregunta": "¿Qué es un modelo personalizado en Ollama?",
+        "respuesta": "Un modelo personalizado en Ollama es una versión configurada a partir de un modelo base usando un Modelfile, donde se pueden definir instrucciones y parámetros."
+    },
+    {
+        "pregunta": "¿Qué es un Modelfile?",
+        "respuesta": "Un Modelfile es un archivo de configuración de Ollama que permite crear un modelo personalizado indicando el modelo base, instrucciones del sistema y parámetros."
+    },
+    {
+        "pregunta": "¿Se puede usar un Modelfile en este proyecto?",
+        "respuesta": "Sí, se puede usar un Modelfile para crear un modelo personalizado llamado, por ejemplo, microchatgpt, y luego indicarlo en chat.php."
+    },
+    {
+        "pregunta": "¿Qué diferencia hay entre conocimiento.json y un Modelfile?",
+        "respuesta": "conocimiento.json guarda preguntas y respuestas concretas, mientras que un Modelfile define el comportamiento general del modelo de IA."
+    },
+    {
+        "pregunta": "¿Qué aporta este proyecto respecto al proyecto 1?",
+        "respuesta": "El proyecto 1 se centra en instalar Ollama y ejecutar modelos desde la terminal. El proyecto 2 añade una aplicación web que permite conversar con la IA desde el navegador."
+    },
+    {
+        "pregunta": "¿Qué se aprende con este proyecto?",
+        "respuesta": "Se aprende a conectar una interfaz web con una IA local, a usar PHP como backend, a enviar datos con JavaScript y a consumir la API local de Ollama."
+    },
+    {
+        "pregunta": "¿Qué tecnologías se utilizan en MicroChatGPT?",
+        "respuesta": "Se utilizan HTML, CSS, JavaScript, PHP, Apache, Ubuntu y Ollama."
+    },
+    {
+        "pregunta": "¿Dónde está alojado el proyecto?",
+        "respuesta": "El proyecto está alojado localmente en Apache, dentro de la carpeta /var/www/html/interfaces/proyecto2-microchatgpt-php."
+    },
+    {
+        "pregunta": "¿Cómo se accede al proyecto desde el navegador?",
+        "respuesta": "Se accede desde el navegador escribiendo http://localhost/interfaces/proyecto2-microchatgpt-php."
+    },
+    {
+        "pregunta": "¿Qué significa que el proyecto esté en localhost?",
+        "respuesta": "Significa que la aplicación se ejecuta en el propio ordenador y no en un servidor externo de internet."
+    },
+    {
+        "pregunta": "¿Qué función tiene Apache en el proyecto?",
+        "respuesta": "Apache sirve los archivos del proyecto y permite ejecutar PHP desde el navegador."
+    },
+    {
+        "pregunta": "¿Por qué se usa Apache?",
+        "respuesta": "Se usa Apache porque permite ejecutar aplicaciones web locales con PHP de forma sencilla."
+    },
+    {
+        "pregunta": "¿Qué ocurre si PHP no tiene cURL instalado?",
+        "respuesta": "Si PHP no tiene cURL instalado, chat.php no podrá realizar la petición HTTP a Ollama y la aplicación no funcionará correctamente."
+    },
+    {
+        "pregunta": "¿Para qué sirve cURL en PHP?",
+        "respuesta": "cURL sirve para realizar peticiones HTTP desde PHP. En este proyecto se utiliza para enviar la pregunta del usuario a la API local de Ollama."
+    },
+    {
+        "pregunta": "¿Cómo se instala cURL para PHP?",
+        "respuesta": "Se puede instalar con el comando sudo apt install php-curl -y y después reiniciar Apache con sudo systemctl restart apache2."
+    },
+    {
+        "pregunta": "¿Qué tipo de respuesta devuelve Ollama?",
+        "respuesta": "Ollama devuelve una respuesta en formato JSON que incluye el contenido generado por el modelo dentro del campo message.content."
+    },
+    {
+        "pregunta": "¿Qué hace json_decode en PHP?",
+        "respuesta": "json_decode convierte un texto JSON en una estructura que PHP puede manejar, como un array asociativo."
+    },
+    {
+        "pregunta": "¿Qué hace json_encode en PHP?",
+        "respuesta": "json_encode convierte datos de PHP en formato JSON para enviarlos al navegador o a otra API."
+    },
+    {
+        "pregunta": "¿Por qué chat.php devuelve JSON?",
+        "respuesta": "chat.php devuelve JSON porque JavaScript puede leer fácilmente ese formato y extraer la respuesta de la IA para mostrarla en pantalla."
+    },
+    {
+        "pregunta": "¿Qué errores puede mostrar el proyecto?",
+        "respuesta": "Puede mostrar errores si no se recibe ningún mensaje, si Ollama no está activo, si el modelo no está instalado o si la respuesta de Ollama no tiene el formato esperado."
+    },
+    {
+        "pregunta": "¿Cómo se puede mejorar este proyecto?",
+        "respuesta": "Se puede mejorar añadiendo historial de conversación, base de conocimiento con JSON, selección de modelo, respuestas en streaming y almacenamiento de conversaciones."
+    },
+    {
+        "pregunta": "¿Se puede guardar el historial del chat?",
+        "respuesta": "Sí, se puede guardar el historial usando sesiones PHP, archivos JSON o una base de datos."
+    },
+    {
+        "pregunta": "¿Se puede cambiar el modelo desde la interfaz?",
+        "respuesta": "Sí, se podría añadir un selector en la interfaz para elegir entre varios modelos instalados en Ollama."
+    },
+    {
+        "pregunta": "¿Se puede usar este proyecto sin internet?",
+        "respuesta": "Sí, una vez que Ollama y el modelo están instalados, el proyecto puede funcionar de forma local sin conexión a internet."
+    },
+    {
+        "pregunta": "¿Es necesario tener internet para descargar el modelo?",
+        "respuesta": "Sí, se necesita internet para descargar Ollama y los modelos. Después de descargarlos, se pueden ejecutar localmente."
+    },
+    {
+        "pregunta": "¿Qué diferencia hay entre una IA local y una IA en la nube?",
+        "respuesta": "Una IA local se ejecuta en el propio ordenador, mientras que una IA en la nube se ejecuta en servidores externos. La IA local ofrece más control, pero depende del hardware disponible."
+    },
+    {
+        "pregunta": "¿Qué conclusión tiene el proyecto?",
+        "respuesta": "La conclusión es que se puede crear un chat web funcional conectado a una inteligencia artificial local usando PHP, JavaScript y Ollama."
+    },
+    {
+        "pregunta": "¿Cómo explicaría este proyecto en clase?",
+        "respuesta": "Este proyecto consiste en crear un MicroChatGPT local. El usuario escribe una pregunta en una web, JavaScript la envía a PHP, PHP consulta a Ollama y la respuesta generada por la IA se muestra en el chat."
+    },
+    {
+        "pregunta": "¿Qué demuestra este proyecto?",
+        "respuesta": "Demuestra que es posible integrar una IA local dentro de una aplicación web usando tecnologías sencillas como PHP y JavaScript."
+    },
+    {
+        "pregunta": "¿Qué parte es la más importante del proyecto?",
+        "respuesta": "La parte más importante es la conexión entre chat.php y la API local de Ollama, porque es lo que permite que la aplicación web obtenga respuestas de la IA."
+    },
+    {
+        "pregunta": "¿Qué parte visual tiene el proyecto?",
+        "respuesta": "El proyecto tiene una interfaz tipo chat, con mensajes del usuario, respuestas de la IA, un formulario de entrada y un panel explicativo del funcionamiento."
+    },
+    {
+        "pregunta": "¿Qué hace el botón enviar?",
+        "respuesta": "El botón enviar lanza el evento del formulario, captura el mensaje escrito y lo envía a chat.php para obtener una respuesta de la IA."
+    },
+    {
+        "pregunta": "¿Qué pasa si el usuario envía el campo vacío?",
+        "respuesta": "Si el usuario envía el campo vacío, JavaScript evita enviar la petición y no se consulta a la IA."
+    },
+    {
+        "pregunta": "¿Qué significa que PHP sea backend?",
+        "respuesta": "Significa que PHP se ejecuta en el servidor y se encarga de procesar la lógica interna de la aplicación."
+    },
+    {
+        "pregunta": "¿Qué significa que JavaScript sea frontend?",
+        "respuesta": "Significa que JavaScript se ejecuta en el navegador y se encarga de la interacción del usuario con la página."
+    },
+    {
+        "pregunta": "¿Por qué se separan los archivos del proyecto?",
+        "respuesta": "Se separan para mantener el código ordenado: index.php contiene la estructura, style.css el diseño, script.js la interacción y chat.php la lógica de conexión con Ollama."
+    },
+    {
+        "pregunta": "¿Qué mejora aporta conocimiento.json?",
+        "respuesta": "conocimiento.json aporta una base de respuestas controladas sobre el propio proyecto, lo que permite responder más rápido y con mayor precisión a preguntas frecuentes."
+    },
+    {
+        "pregunta": "¿Puede conocimiento.json sustituir completamente a Ollama?",
+        "respuesta": "No completamente. conocimiento.json sirve para preguntas conocidas, pero Ollama es necesario para generar respuestas nuevas ante preguntas no previstas."
+    },
+    {
+        "pregunta": "¿Qué tipo de preguntas debería contener conocimiento.json?",
+        "respuesta": "Debería contener preguntas relacionadas con el proyecto, como qué es MicroChatGPT, cómo funciona Ollama, qué hace PHP y cómo se comunica la aplicación con la IA."
+    },
+    {
+        "pregunta": "¿Cómo se puede ampliar conocimiento.json?",
+        "respuesta": "Se puede ampliar añadiendo más objetos con nuevas preguntas y respuestas, respetando siempre la estructura JSON."
+    },
+    {
+        "pregunta": "¿Qué cuidado hay que tener al editar conocimiento.json?",
+        "respuesta": "Hay que respetar las comas, las comillas y los corchetes del formato JSON. Un error de sintaxis puede impedir que PHP lea correctamente el archivo."
+    },
+    {
+        "pregunta": "¿Cómo se valida un JSON?",
+        "respuesta": "Se puede validar revisando que todos los objetos estén separados por comas, que las claves estén entre comillas y que el archivo empiece con [ y termine con ]."
+    },
+    {
+        "pregunta": "¿Qué diferencia hay entre este proyecto y ChatGPT real?",
+        "respuesta": "ChatGPT real es un servicio avanzado en la nube con modelos muy potentes. MicroChatGPT es una versión educativa local que demuestra el funcionamiento básico de un chat con IA."
+    },
+    {
+        "pregunta": "¿Por qué se llama MicroChatGPT?",
+        "respuesta": "Se llama MicroChatGPT porque es una versión pequeña y sencilla de un chat con IA, creada con fines educativos."
+    },
+    {
+        "pregunta": "¿Qué podría añadirse en una versión futura?",
+        "respuesta": "En una versión futura se podría añadir historial, usuarios, guardado de conversaciones, selección de modelo, subida de documentos y búsqueda en una base de conocimiento."
+    },
+    {
+        "pregunta": "¿Qué relación tiene este proyecto con la inteligencia artificial?",
+        "respuesta": "Este proyecto integra un modelo de lenguaje ejecutado localmente y permite interactuar con él desde una aplicación web."
+    },
+    {
+        "pregunta": "¿Qué relación tiene este proyecto con PHP?",
+        "respuesta": "PHP se utiliza para conectar la web con Ollama, procesar la petición del usuario y devolver la respuesta generada."
+    },
+    {
+        "pregunta": "¿Qué relación tiene este proyecto con Ollama?",
+        "respuesta": "Ollama es el sistema encargado de ejecutar el modelo de inteligencia artificial y generar las respuestas que se muestran en el chat."
+    }
+]

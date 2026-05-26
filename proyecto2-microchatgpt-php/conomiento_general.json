@@ -1,0 +1,258 @@
+[
+  {
+    "pregunta": "¿Qué es CEAC FP?",
+    "respuesta": "CEAC FP es un centro de Formación Profesional donde se imparten ciclos formativos de Grado Medio y Grado Superior. En este proyecto se usa como contexto educativo para desarrollar prácticas relacionadas con inteligencia artificial, desarrollo web, PHP, JSON, Ollama y diseño de interfaces."
+  },
+  {
+    "pregunta": "¿Qué significa CEAC FP?",
+    "respuesta": "CEAC FP hace referencia a un centro de Formación Profesional. FP significa Formación Profesional, una enseñanza orientada a preparar al alumnado para el mundo laboral mediante contenidos prácticos y técnicos."
+  },
+  {
+    "pregunta": "¿Qué es DAW?",
+    "respuesta": "DAW significa Desarrollo de Aplicaciones Web. Es un ciclo formativo de Grado Superior centrado en la creación de aplicaciones web, programación, bases de datos, interfaces, servidores y despliegue de proyectos."
+  },
+  {
+    "pregunta": "¿Qué es DAW2?",
+    "respuesta": "DAW2 es el segundo curso del ciclo de Desarrollo de Aplicaciones Web. En este curso se suelen trabajar contenidos más avanzados como desarrollo en servidor, desarrollo en cliente, despliegue de aplicaciones, diseño de interfaces y proyecto final."
+  },
+  {
+    "pregunta": "¿Qué es Diseño de Interfaces Web?",
+    "respuesta": "Diseño de Interfaces Web es una asignatura relacionada con la creación de interfaces visuales para aplicaciones y páginas web. Se trabajan aspectos como estructura, usabilidad, accesibilidad, diseño responsive, experiencia de usuario y presentación visual."
+  },
+  {
+    "pregunta": "¿Qué relación tiene la inteligencia artificial con DAW?",
+    "respuesta": "La inteligencia artificial puede integrarse en proyectos de DAW para crear asistentes, correctores de texto, sistemas de recomendación, análisis de datos, chatbots, automatizaciones y herramientas que mejoren la experiencia del usuario."
+  },
+  {
+    "pregunta": "¿Qué es una inteligencia artificial?",
+    "respuesta": "La inteligencia artificial es una rama de la informática que permite crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como comprender texto, generar respuestas, analizar información o tomar decisiones simples."
+  },
+  {
+    "pregunta": "¿Qué es una IA generativa?",
+    "respuesta": "Una IA generativa es un tipo de inteligencia artificial capaz de crear contenido nuevo a partir de una entrada del usuario. Puede generar texto, imágenes, código, resúmenes, explicaciones o respuestas."
+  },
+  {
+    "pregunta": "¿Qué es un modelo de lenguaje?",
+    "respuesta": "Un modelo de lenguaje es un sistema de inteligencia artificial entrenado para comprender y generar texto. Analiza el contexto de una pregunta y genera una respuesta probable usando patrones aprendidos durante su entrenamiento."
+  },
+  {
+    "pregunta": "¿Qué es Ollama?",
+    "respuesta": "Ollama es una herramienta que permite ejecutar modelos de inteligencia artificial de forma local en un ordenador. Gracias a Ollama, una aplicación web puede usar IA sin depender necesariamente de servicios externos en la nube."
+  },
+  {
+    "pregunta": "¿Para qué sirve Ollama?",
+    "respuesta": "Ollama sirve para descargar, gestionar y ejecutar modelos de inteligencia artificial en local. Permite que otros programas, como una aplicación PHP, se comuniquen con el modelo mediante una API local."
+  },
+  {
+    "pregunta": "¿Qué ventaja tiene usar Ollama?",
+    "respuesta": "La principal ventaja de Ollama es que permite trabajar con inteligencia artificial en local. Esto mejora la privacidad, reduce la dependencia de internet y permite experimentar con modelos de IA desde el propio equipo."
+  },
+  {
+    "pregunta": "¿Qué desventaja tiene usar Ollama?",
+    "respuesta": "La principal desventaja de Ollama es que el rendimiento depende del hardware del ordenador. Si el equipo tiene poca memoria RAM o un procesador limitado, las respuestas pueden tardar más."
+  },
+  {
+    "pregunta": "¿Qué es llama3.2:1b?",
+    "respuesta": "llama3.2:1b es un modelo de lenguaje ligero que puede ejecutarse con Ollama. Al ser pequeño, consume menos recursos y es adecuado para pruebas locales, aunque puede tener menos capacidad que modelos más grandes."
+  },
+  {
+    "pregunta": "¿Qué es PHP?",
+    "respuesta": "PHP es un lenguaje de programación del lado del servidor utilizado para crear páginas web dinámicas. En este proyecto, PHP actúa como intermediario entre la interfaz web y la API local de Ollama."
+  },
+  {
+    "pregunta": "¿Qué es JavaScript?",
+    "respuesta": "JavaScript es un lenguaje de programación que se ejecuta principalmente en el navegador. Permite añadir interacción a las páginas web, como capturar formularios, enviar peticiones y modificar el contenido de la página sin recargarla."
+  },
+  {
+    "pregunta": "¿Qué es HTML?",
+    "respuesta": "HTML es el lenguaje de marcado utilizado para estructurar el contenido de una página web. Define elementos como títulos, párrafos, formularios, enlaces, imágenes y secciones."
+  },
+  {
+    "pregunta": "¿Qué es CSS?",
+    "respuesta": "CSS es el lenguaje utilizado para definir el diseño visual de una página web. Permite modificar colores, tamaños, márgenes, posiciones, tipografías, animaciones y diseño responsive."
+  },
+  {
+    "pregunta": "¿Qué es JSON?",
+    "respuesta": "JSON es un formato de texto ligero utilizado para almacenar e intercambiar datos de forma estructurada. Es muy habitual en aplicaciones web porque puede ser leído fácilmente por JavaScript, PHP y otros lenguajes."
+  },
+  {
+    "pregunta": "¿Para qué sirve un archivo JSON?",
+    "respuesta": "Un archivo JSON sirve para guardar información estructurada. En este proyecto se puede utilizar como base de conocimiento, almacenando preguntas y respuestas que la aplicación puede consultar antes de llamar a la IA."
+  },
+  {
+    "pregunta": "¿Qué es una API?",
+    "respuesta": "Una API es un conjunto de reglas que permite que dos aplicaciones se comuniquen entre sí. En este proyecto, PHP utiliza la API local de Ollama para enviar preguntas y recibir respuestas generadas por la inteligencia artificial."
+  },
+  {
+    "pregunta": "¿Qué es una API local?",
+    "respuesta": "Una API local es una interfaz de comunicación que funciona dentro del propio ordenador o servidor. En el caso de Ollama, normalmente está disponible en localhost usando el puerto 11434."
+  },
+  {
+    "pregunta": "¿Qué significa localhost?",
+    "respuesta": "localhost hace referencia al propio equipo donde se está ejecutando una aplicación. Cuando se accede a localhost, el navegador o programa está comunicándose con servicios instalados en el mismo ordenador."
+  },
+  {
+    "pregunta": "¿Qué es Apache?",
+    "respuesta": "Apache es un servidor web que permite servir páginas y aplicaciones web. En este proyecto se utiliza para ejecutar PHP y mostrar la aplicación desde el navegador."
+  },
+  {
+    "pregunta": "¿Qué es XAMPP?",
+    "respuesta": "XAMPP es un paquete que incluye Apache, PHP, MySQL y otras herramientas para desarrollar aplicaciones web en local, especialmente en Windows."
+  },
+  {
+    "pregunta": "¿Qué es Ubuntu?",
+    "respuesta": "Ubuntu es un sistema operativo basado en Linux. En este proyecto se utiliza como entorno local para ejecutar Apache, PHP, Ollama y los proyectos web."
+  },
+  {
+    "pregunta": "¿Qué es un servidor web?",
+    "respuesta": "Un servidor web es un programa o equipo que entrega páginas y recursos web al navegador. Por ejemplo, Apache puede servir archivos PHP, HTML, CSS y JavaScript."
+  },
+  {
+    "pregunta": "¿Qué es frontend?",
+    "respuesta": "Frontend es la parte visible de una aplicación web con la que interactúa el usuario. Incluye la estructura HTML, los estilos CSS y la lógica JavaScript que se ejecuta en el navegador."
+  },
+  {
+    "pregunta": "¿Qué es backend?",
+    "respuesta": "Backend es la parte interna de una aplicación web que se ejecuta en el servidor. Gestiona la lógica, las peticiones, la conexión con bases de datos y la comunicación con servicios externos o locales."
+  },
+  {
+    "pregunta": "¿Qué diferencia hay entre frontend y backend?",
+    "respuesta": "El frontend es la parte que ve y utiliza el usuario en el navegador. El backend es la parte que se ejecuta en el servidor y se encarga de procesar datos, aplicar lógica y comunicarse con otros servicios."
+  },
+  {
+    "pregunta": "¿Qué es fetch en JavaScript?",
+    "respuesta": "fetch es una función de JavaScript que permite hacer peticiones HTTP desde el navegador. En este proyecto se usa para enviar el mensaje del usuario a un archivo PHP y recibir la respuesta de la IA."
+  },
+  {
+    "pregunta": "¿Qué es cURL en PHP?",
+    "respuesta": "cURL es una herramienta que permite realizar peticiones HTTP desde PHP. En este proyecto se utiliza para enviar datos desde PHP a la API local de Ollama."
+  },
+  {
+    "pregunta": "¿Qué es una petición POST?",
+    "respuesta": "Una petición POST es un tipo de solicitud HTTP que se utiliza para enviar datos al servidor. En este proyecto se usa para mandar el mensaje del usuario desde JavaScript a PHP."
+  },
+  {
+    "pregunta": "¿Qué es una respuesta JSON?",
+    "respuesta": "Una respuesta JSON es una respuesta estructurada en formato JSON. Permite que el frontend reciba datos organizados, como una respuesta de la IA o un mensaje de error."
+  },
+  {
+    "pregunta": "¿Qué es un prompt?",
+    "respuesta": "Un prompt es la instrucción, pregunta o texto que se envía a una inteligencia artificial para que genere una respuesta."
+  },
+  {
+    "pregunta": "¿Qué es un prompt del sistema?",
+    "respuesta": "Un prompt del sistema es una instrucción inicial que define cómo debe comportarse la IA. Puede indicar el idioma, el tono, el nivel de detalle y las normas que debe seguir al responder."
+  },
+  {
+    "pregunta": "¿Qué es entrenar una IA?",
+    "respuesta": "Entrenar una IA consiste en ajustar un modelo usando grandes cantidades de datos para que aprenda patrones. Es un proceso complejo que requiere recursos avanzados. En proyectos educativos normalmente no se entrena el modelo desde cero, sino que se personaliza mediante instrucciones o bases de conocimiento."
+  },
+  {
+    "pregunta": "¿Qué diferencia hay entre entrenar y personalizar una IA?",
+    "respuesta": "Entrenar una IA implica modificar el modelo con nuevos datos. Personalizar una IA consiste en darle instrucciones, contexto o información adicional sin cambiar realmente el modelo base."
+  },
+  {
+    "pregunta": "¿Qué es una base de conocimiento?",
+    "respuesta": "Una base de conocimiento es un conjunto de información organizada que una aplicación puede consultar para responder mejor a determinadas preguntas. En este proyecto se guarda en archivos JSON."
+  },
+  {
+    "pregunta": "¿Qué ventaja tiene una base de conocimiento en JSON?",
+    "respuesta": "Una base de conocimiento en JSON permite guardar respuestas controladas, rápidas y fáciles de editar. Es útil para preguntas frecuentes o información que el modelo de IA no conoce correctamente."
+  },
+  {
+    "pregunta": "¿Qué es RAG?",
+    "respuesta": "RAG significa Retrieval Augmented Generation. Es una técnica que combina búsqueda de información con generación de respuestas. Primero se recuperan datos relevantes y después la IA los usa para responder mejor."
+  },
+  {
+    "pregunta": "¿Para qué sirve RAG?",
+    "respuesta": "RAG sirve para mejorar las respuestas de una IA usando información externa o propia del proyecto. Es útil cuando el modelo no conoce ciertos datos o cuando se quiere responder a partir de documentos concretos."
+  },
+  {
+    "pregunta": "¿Qué es una base de datos vectorial?",
+    "respuesta": "Una base de datos vectorial es un sistema que almacena información convertida en vectores numéricos. Permite buscar contenido por significado, no solo por palabras exactas."
+  },
+  {
+    "pregunta": "¿Qué es un embedding?",
+    "respuesta": "Un embedding es una representación numérica de un texto. Permite que una máquina compare textos por significado y encuentre información relacionada aunque no use exactamente las mismas palabras."
+  },
+  {
+    "pregunta": "¿Qué es un chatbot?",
+    "respuesta": "Un chatbot es una aplicación que permite mantener una conversación con un sistema automático. Puede responder preguntas, ayudar al usuario, explicar conceptos o realizar tareas concretas."
+  },
+  {
+    "pregunta": "¿Qué es MicroChatGPT?",
+    "respuesta": "MicroChatGPT es una aplicación web educativa que simula un pequeño chat con inteligencia artificial. El usuario escribe una pregunta, JavaScript la envía a PHP y PHP consulta a Ollama para generar una respuesta."
+  },
+  {
+    "pregunta": "¿Qué hace el proyecto MicroChatGPT?",
+    "respuesta": "El proyecto MicroChatGPT permite conversar desde una página web con una inteligencia artificial ejecutada localmente mediante Ollama. Sirve para aprender a conectar frontend, backend y una API de IA."
+  },
+  {
+    "pregunta": "¿Qué aprende un alumno con este proyecto?",
+    "respuesta": "Con este proyecto se aprende a crear una interfaz web, enviar datos con JavaScript, procesarlos con PHP, consumir una API local, trabajar con JSON y comprender cómo se puede integrar inteligencia artificial en una aplicación web."
+  },
+  {
+    "pregunta": "¿Qué es un corrector de correos con IA?",
+    "respuesta": "Un corrector de correos con IA es una aplicación que recibe un texto escrito por el usuario y lo mejora. Puede corregir faltas, cambiar el tono, hacerlo más formal, ordenar ideas y generar una versión más profesional."
+  },
+  {
+    "pregunta": "¿Qué es un sistema de pregunta y respuesta?",
+    "respuesta": "Un sistema de pregunta y respuesta es una aplicación que recibe una pregunta del usuario y devuelve una respuesta concreta. Puede usar una base de conocimiento, una IA generativa o ambas cosas."
+  },
+  {
+    "pregunta": "¿Qué es una comunicación entre PHP y Python?",
+    "respuesta": "La comunicación entre PHP y Python consiste en hacer que ambos lenguajes trabajen juntos. Por ejemplo, PHP puede recibir datos desde una web y llamar a un script de Python para procesarlos."
+  },
+  {
+    "pregunta": "¿Para qué sirve combinar PHP y Python?",
+    "respuesta": "Combinar PHP y Python permite aprovechar lo mejor de cada lenguaje. PHP puede encargarse de la parte web y Python puede realizar tareas de procesamiento, inteligencia artificial, análisis de datos o automatización."
+  },
+  {
+    "pregunta": "¿Qué es un proyecto web local?",
+    "respuesta": "Un proyecto web local es una aplicación que se ejecuta en el propio ordenador o servidor de desarrollo, normalmente accediendo mediante localhost. Es útil para aprender, probar y desarrollar antes de publicar."
+  },
+  {
+    "pregunta": "¿Qué es una ruta de proyecto?",
+    "respuesta": "Una ruta de proyecto es la ubicación donde se guardan los archivos de una aplicación. Por ejemplo, /var/www/html/interfaces/proyecto2-microchatgpt-php es una ruta dentro del servidor Apache en Ubuntu."
+  },
+  {
+    "pregunta": "¿Por qué organizar los proyectos en carpetas separadas?",
+    "respuesta": "Organizar los proyectos en carpetas separadas permite mantener el trabajo ordenado, evitar mezclar archivos y acceder fácilmente a cada práctica desde el navegador."
+  },
+  {
+    "pregunta": "¿Qué es Visual Studio Code?",
+    "respuesta": "Visual Studio Code es un editor de código muy utilizado para programar. Permite abrir carpetas de proyectos, editar archivos, usar terminal integrada, instalar extensiones y trabajar de forma cómoda con lenguajes como HTML, CSS, JavaScript y PHP."
+  },
+  {
+    "pregunta": "¿Qué es una interfaz web?",
+    "respuesta": "Una interfaz web es la parte visual e interactiva de una aplicación que el usuario utiliza desde el navegador. Incluye botones, formularios, menús, textos, tarjetas y otros elementos de interacción."
+  },
+  {
+    "pregunta": "¿Qué es la experiencia de usuario?",
+    "respuesta": "La experiencia de usuario es la forma en la que una persona percibe y utiliza una aplicación. Una buena experiencia de usuario hace que la web sea clara, cómoda, rápida y fácil de entender."
+  },
+  {
+    "pregunta": "¿Qué es la usabilidad?",
+    "respuesta": "La usabilidad es la facilidad con la que un usuario puede utilizar una aplicación o página web. Una web usable permite encontrar información, realizar acciones y entender el funcionamiento sin dificultad."
+  },
+  {
+    "pregunta": "¿Qué es el diseño responsive?",
+    "respuesta": "El diseño responsive permite que una página web se adapte a distintos tamaños de pantalla, como ordenadores, tablets y móviles."
+  },
+  {
+    "pregunta": "¿Qué es la accesibilidad web?",
+    "respuesta": "La accesibilidad web consiste en diseñar páginas que puedan ser utilizadas por el mayor número posible de personas, incluyendo usuarios con dificultades visuales, motoras, auditivas o cognitivas."
+  },
+  {
+    "pregunta": "¿Qué es una práctica de clase?",
+    "respuesta": "Una práctica de clase es un ejercicio diseñado para aplicar los conocimientos aprendidos en una asignatura. En este caso, las prácticas permiten trabajar inteligencia artificial, PHP, JSON, diseño web y comunicación entre tecnologías."
+  },
+  {
+    "pregunta": "¿Cómo explicar este proyecto en clase?",
+    "respuesta": "Este proyecto se puede explicar como una aplicación web local que conecta una interfaz tipo chat con una inteligencia artificial ejecutada mediante Ollama. El usuario escribe una pregunta, JavaScript la envía a PHP, PHP consulta primero una base de conocimiento JSON y, si no encuentra respuesta, llama a Ollama."
+  },
+  {
+    "pregunta": "¿Qué conclusión tiene este proyecto?",
+    "respuesta": "La conclusión es que una aplicación web puede integrar inteligencia artificial local usando tecnologías sencillas como HTML, CSS, JavaScript, PHP, JSON y Ollama. Además, una base de conocimiento permite mejorar las respuestas sobre temas concretos."
+  }
+]
