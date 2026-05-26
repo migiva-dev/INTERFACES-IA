@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto 1 - Introducción a IA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul: #2563eb;
+            --azul-oscuro: #1e3a8a;
+            --morado: #7c3aed;
+            --fondo: #eef2ff;
+            --texto: #1e293b;
+            --gris: #64748b;
+            --blanco: #ffffff;
+            --verde: #16a34a;
+            --negro: #0f172a;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(37, 99, 235, 0.30), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.25), transparent 30%),
+                linear-gradient(135deg, #f8fafc, #e0e7ff);
+            color: var(--texto);
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 35px 22px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--azul), var(--morado));
+            color: white;
+            padding: 42px;
+            border-radius: 28px;
+            margin-bottom: 28px;
+            box-shadow: 0 24px 55px rgba(37, 99, 235, 0.30);
+        }
+
+        .etiqueta {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.18);
+            padding: 8px 15px;
+            border-radius: 999px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 42px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            max-width: 780px;
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.94);
+            padding: 28px;
+            border-radius: 24px;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.60);
+            margin-bottom: 24px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: var(--azul-oscuro);
+            font-size: 26px;
+        }
+
+        .card p,
+        .card li {
+            line-height: 1.7;
+            color: #334155;
+        }
+
+        .paso {
+            margin-bottom: 24px;
+        }
+
+        .paso h3 {
+            color: var(--azul-oscuro);
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background: var(--negro);
+            color: #d1fae5;
+            padding: 18px;
+            border-radius: 16px;
+            overflow-x: auto;
+            font-size: 15px;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+
+        .nota {
+            background: #eff6ff;
+            border-left: 6px solid var(--azul);
+            padding: 18px;
+            border-radius: 16px;
+            margin-top: 18px;
+        }
+
+        .resultado {
+            background: #ecfdf5;
+            border-left: 6px solid var(--verde);
+            padding: 18px;
+            border-radius: 16px;
+            margin-top: 18px;
+        }
+
+        .lista-comandos {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .lista-comandos li {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .volver {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, var(--azul), var(--morado));
+            padding: 13px 18px;
+            border-radius: 14px;
+            margin-top: 10px;
+        }
+
+        .volver:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 850px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 30px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="contenedor">
+
+        <section class="hero">
+            <span class="etiqueta">Proyecto 1</span>
+            <h1>Introducción a IA: instalación de Ollama y modelos</h1>
+            <p>
+                En este primer proyecto se realiza una introducción al uso de inteligencia artificial
+                ejecutada de forma local mediante Ollama. El objetivo es instalar la herramienta,
+                descargar un modelo y comprobar su funcionamiento desde la terminal.
+            </p>
+        </section>
+
+        <section class="grid">
+
+            <article class="card">
+                <h2>Objetivo del proyecto</h2>
+
+                <p>
+                    El objetivo principal es preparar un entorno local para trabajar con modelos
+                    de inteligencia artificial sin depender directamente de una plataforma externa.
+                </p>
+
+                <p>
+                    Para ello se utiliza <strong>Ollama</strong>, una herramienta que permite descargar
+                    y ejecutar modelos de lenguaje desde la terminal de Ubuntu.
+                </p>
+
+                <div class="nota">
+                    <strong>Resumen:</strong> este proyecto sirve como base para los siguientes ejercicios,
+                    donde se conectará Ollama con PHP, formularios, JSON, RAG y comunicación entre lenguajes.
+                </div>
+            </article>
+
+            <aside class="card">
+                <h2>Tecnologías usadas</h2>
+
+                <ul>
+                    <li>Windows 11</li>
+                    <li>Ubuntu</li>
+                    <li>Apache</li>
+                    <li>Terminal de Linux</li>
+                    <li>curl</li>
+                    <li>zstd</li>
+                    <li>Ollama</li>
+                    <li>Modelo ministral-3:3b</li>
+                </ul>
+            </aside>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Pasos realizados</h2>
+
+            <div class="paso">
+                <h3>1. Instalación de curl</h3>
+                <p>
+                    Primero se instala <strong>curl</strong>, una herramienta que permite descargar
+                    contenido y realizar peticiones desde la terminal.
+                </p>
+
+                <pre><code>sudo apt install curl</code></pre>
+            </div>
+
+            <div class="paso">
+                <h3>2. Instalación de Ollama</h3>
+                <p>
+                    Después se instala Ollama mediante el script de instalación.
+                </p>
+
+                <pre><code>curl -fsSL https://ollama.com/install.sh | sh</code></pre>
+            </div>
+
+            <div class="paso">
+                <h3>3. Instalación de zstd</h3>
+                <p>
+                    En algunas instalaciones puede aparecer un error indicando que falta
+                    <strong>zstd</strong>. Esta herramienta permite descomprimir correctamente
+                    el paquete de Ollama.
+                </p>
+
+                <pre><code>sudo apt update
+sudo apt install zstd -y</code></pre>
+            </div>
+
+            <div class="paso">
+                <h3>4. Descarga del modelo</h3>
+                <p>
+                    Una vez instalado Ollama, se descarga el modelo indicado para la práctica.
+                </p>
+
+                <pre><code>ollama pull ministral-3:3b</code></pre>
+            </div>
+
+            <div class="paso">
+                <h3>5. Comprobación de modelos instalados</h3>
+                <p>
+                    Este comando permite ver los modelos que hay descargados en el equipo.
+                </p>
+
+                <pre><code>ollama list</code></pre>
+            </div>
+
+            <div class="paso">
+                <h3>6. Ejecución del modelo</h3>
+                <p>
+                    Para comprobar que el modelo funciona, se realiza una pregunta directamente
+                    desde la terminal.
+                </p>
+
+                <pre><code>ollama run ministral-3:3b "Quien es Jose Vicente Carratalá?"</code></pre>
+            </div>
+
+            <div class="resultado">
+                <strong>Resultado esperado:</strong> si la instalación es correcta, Ollama responderá
+                desde la terminal utilizando el modelo descargado.
+            </div>
+
+        </section>
+
+        <section class="card">
+            <h2>Comandos principales del proyecto</h2>
+
+            <ul class="lista-comandos">
+                <li><code>sudo apt install curl</code></li>
+                <li><code>curl -fsSL https://ollama.com/install.sh | sh</code></li>
+                <li><code>sudo apt update && sudo apt install zstd -y</code></li>
+                <li><code>ollama pull ministral-3:3b</code></li>
+                <li><code>ollama list</code></li>
+                <li><code>ollama run ministral-3:3b "Quien es Jose Vicente Carratalá?"</code></li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Conclusión</h2>
+
+            <p>
+                En este primer proyecto se ha preparado el entorno necesario para trabajar con
+                inteligencia artificial en local. Se ha instalado Ollama, se ha descargado un modelo
+                y se ha comprobado que puede responder preguntas desde la terminal.
+            </p>
+
+            <p>
+                Este proyecto es importante porque será la base de los siguientes ejercicios, donde
+                se usará Ollama desde aplicaciones web realizadas con PHP y otros lenguajes.
+            </p>
+        </section>
+
+        <a href="../" class="volver">Volver al listado de proyectos</a>
+
+    </main>
+
+</body>
+</html>
