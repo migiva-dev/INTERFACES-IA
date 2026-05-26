@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto 5 - Entrenamiento de IA con JSON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+
+    <main class="app">
+
+        <section class="card">
+
+            <header class="header">
+                <div>
+                    <span class="badge">Proyecto 5</span>
+                    <h1>Entrenamiento de IA con JSON</h1>
+                    <p>
+                        Pregunta lo que quieras. Primero se busca en la base de conocimiento local JSON.
+                        Si no se encuentra respuesta, se consulta a Ollama automáticamente.
+                    </p>
+                </div>
+
+                <div class="estado-ia">
+                    <span></span>
+                    Ollama activo
+                </div>
+            </header>
+
+            <section class="contenido">
+
+                <aside class="panel-info">
+                    <h2>¿Cómo funciona?</h2>
+
+                    <p>
+                        El sistema usa una base de conocimiento propia antes de
+                        recurrir a la inteligencia artificial.
+                    </p>
+
+                    <div class="lista-info">
+                        <div>
+                            <span>1</span>
+                            <p>Escribe tu pregunta en el campo de texto.</p>
+                        </div>
+                        <div>
+                            <span>2</span>
+                            <p>PHP busca en <strong>conocimiento.json</strong> si hay una respuesta parecida.</p>
+                        </div>
+                        <div>
+                            <span>3</span>
+                            <p>Si la encuentra, responde al instante desde el JSON.</p>
+                        </div>
+                        <div>
+                            <span>4</span>
+                            <p>Si no, consulta a Ollama y devuelve su respuesta.</p>
+                        </div>
+                    </div>
+
+                    <div class="fuente-badge" id="fuenteBadge">
+                        <span class="dot"></span>
+                        <span class="texto">Esperando pregunta</span>
+                    </div>
+                </aside>
+
+                <section class="zona-trabajo">
+
+                    <div class="chat" id="chat">
+                        <div class="chat-vacio">
+                            <div class="chat-icono">💬</div>
+                            <p>Haz tu primera pregunta para comenzar</p>
+                        </div>
+                    </div>
+
+                    <div class="entrada">
+                        <textarea
+                            id="pregunta"
+                            placeholder="Escribe tu pregunta aquí..."
+                            rows="3"
+                        ></textarea>
+                        <div class="entrada-acciones">
+                            <span id="estadoEntrada">Esperando pregunta</span>
+                            <div class="botones">
+                                <button type="button" id="btnLimpiar" class="btn-limpiar">Limpiar chat</button>
+                                <button type="button" id="btnPreguntar" class="btn-principal">Preguntar →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </section>
+
+            <footer class="footer">
+                <a href="../" class="volver">Volver al listado</a>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script src="script.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Interfaces IA - Menú de Proyectos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul: #2563eb;
+            --azul-oscuro: #1e3a8a;
+            --morado: #7c3aed;
+            --fondo: #020617;
+            --texto: #1e293b;
+            --gris: #64748b;
+            --blanco: #ffffff;
+            --verde: #22c55e;
+            --borde: rgba(255,255,255,0.18);
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(37, 99, 235, 0.35), transparent 32%),
+                radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.35), transparent 32%),
+                linear-gradient(135deg, #020617, #0f172a 45%, #1e1b4b);
+            color: white;
+        }
+
+        .contenedor {
+            width: 100%;
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        .hero {
+            background: rgba(255,255,255,0.10);
+            border: 1px solid var(--borde);
+            backdrop-filter: blur(14px);
+            border-radius: 30px;
+            padding: 42px;
+            margin-bottom: 32px;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            right: -90px;
+            top: -100px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 50%;
+        }
+
+        .etiqueta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--azul), var(--morado));
+            padding: 9px 15px;
+            border-radius: 999px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 44px;
+            letter-spacing: -1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            max-width: 850px;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #dbeafe;
+            position: relative;
+            z-index: 1;
+        }
+
+        .estado {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 22px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pill {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.18);
+            padding: 10px 14px;
+            border-radius: 999px;
+            color: #e0e7ff;
+            font-weight: 600;
+        }
+
+        .pill span {
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            background: var(--verde);
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 0 0 5px rgba(34,197,94,0.18);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            text-decoration: none;
+            color: inherit;
+            background: rgba(255,255,255,0.94);
+            color: var(--texto);
+            border-radius: 26px;
+            padding: 26px;
+            min-height: 245px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid rgba(255,255,255,0.35);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+            transition: 0.25s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            right: -60px;
+            top: -60px;
+            background: linear-gradient(135deg, rgba(37,99,235,0.20), rgba(124,58,237,0.20));
+            border-radius: 50%;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 28px 60px rgba(0,0,0,0.35);
+        }
+
+        .num {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--azul), var(--morado));
+            color: white;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 18px;
+        }
+
+        .card h2 {
+            margin: 0 0 12px;
+            color: var(--azul-oscuro);
+            font-size: 23px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card p {
+            color: #475569;
+            line-height: 1.6;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .abrir {
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--azul);
+            font-weight: 900;
+            position: relative;
+            z-index: 1;
+        }
+
+        .desactivado {
+            opacity: 0.62;
+            cursor: not-allowed;
+        }
+
+        .desactivado:hover {
+            transform: none;
+        }
+
+        .footer {
+            margin-top: 34px;
+            text-align: center;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        @media (max-width: 1000px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .contenedor {
+                padding: 24px 14px;
+            }
+
+            .hero {
+                padding: 28px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="contenedor">
+
+        <section class="hero">
+            <span class="etiqueta">Interfaces IA</span>
+
+            <h1>Menú de proyectos</h1>
+
+            <p>
+                Acceso principal a los 7 proyectos de inteligencia artificial con Ollama,
+                PHP, JSON, RAG y comunicación entre lenguajes. Cada tarjeta abre el proyecto
+                correspondiente dentro del servidor local Apache.
+            </p>
+
+            <div class="estado">
+                <div class="pill"><span></span>Ubuntu activo</div>
+                <div class="pill"><span></span>Apache funcionando</div>
+                <div class="pill"><span></span>Ollama local</div>
+            </div>
+        </section>
+
+        <section class="grid">
+
+            <a class="card" href="proyecto1-introduccion-ia/">
+                <div>
+                    <div class="num">1</div>
+                    <h2>Introducción a IA</h2>
+                    <p>
+                        Instalación de Ollama, descarga de modelos y primeras pruebas
+                        desde la terminal de Ubuntu.
+                    </p>
+                </div>
+                <span class="abrir">Abrir proyecto →</span>
+            </a>
+
+            <a class="card" href="proyecto2-microchatgpt-php/">
+                <div>
+                    <div class="num">2</div>
+                    <h2>MicroChatGPT con PHP</h2>
+                    <p>
+                        Chat web conectado con Ollama usando PHP como intermediario
+                        entre el navegador y la IA local.
+                    </p>
+                </div>
+                <span class="abrir">Abrir proyecto →</span>
+            </a>
+
+            <a class="card" href="proyecto3-pregunta-respuesta/">
+                <div>
+                    <div class="num">3</div>
+                    <h2>Pregunta y respuesta</h2>
+                    <p>
+                        Aplicación de repaso donde el usuario escribe una pregunta
+                        y recibe una respuesta generada por IA.
+                    </p>
+                </div>
+                <span class="abrir">Abrir proyecto →</span>
+            </a>
+
+            <a class="card" href="proyecto4-corrector-correos/">
+                <div>
+                    <div class="num">4</div>
+                    <h2>Corrector de correos</h2>
+                    <p>
+                        Aplicación práctica para corregir, mejorar y formatear correos
+                        electrónicos con ayuda de IA.
+                    </p>
+                </div>
+                <span class="abrir">Abrir proyecto →</span>
+            </a>
+
+            <a class="card" href="proyecto5-entrenamiento-json/">
+                <div>
+                    <div class="num">5</div>
+                    <h2>Entrenamiento con JSON</h2>
+                    <p>
+                        Uso de un archivo JSON con preguntas y respuestas como pequeña
+                        base de conocimiento local.
+                    </p>
+                </div>
+                <span class="abrir">Abrir proyecto →</span>
+            </a>
+
+            <a class="card" href="proyecto6-rag-bbdd-vectoriales/">
+                <div>
+                    <div class="num">6</div>
+                    <h2>RAG y bases vectoriales</h2>
+                    <p>
+                        Introducción a recuperación aumentada por generación y búsqueda
+                        de información mediante vectores.
+                    </p>
+                </div>
+                <span class="abrir">Abrir proyecto →</span>
+            </a>
+
+            <a class="card" href="proyecto7-stack-php-python/">
+                <div>
+                    <div class="num">7</div>
+                    <h2>Stack PHP + Python</h2>
+                    <p>
+                        Mini proyecto donde PHP y Python se comunican para repartir
+                        tareas entre ambos lenguajes.
+                    </p>
+                </div>
+                <span class="abrir">Abrir proyecto →</span>
+            </a>
+
+        </section>
+
+        <p class="footer">
+            Servidor local: Apache · Ruta: /var/www/html/interfaces · Acceso: http://localhost/interfaces
+        </p>
+
+    </main>
+
+</body>
+</html>
